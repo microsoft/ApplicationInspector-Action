@@ -1,4 +1,4 @@
-name: 'DevSkim'
+name: 'TestSkim'
 description: 'Run DevSkim Code Analysis'
 inputs:
   directory-to-scan:
