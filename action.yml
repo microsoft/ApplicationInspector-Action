@@ -1,5 +1,5 @@
-name: 'DevSkim'
-description: 'Run DevSkim Code Analysis'
+name: 'ApplicationInspector'
+description: 'Run ApplicationInspector Static Analysis'
 inputs:
   location-to-scan:
     description: 'The path relative to repository root to scan.'
