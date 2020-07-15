@@ -13,10 +13,14 @@ inputs:
     description: 'Output format [html|json|text]'
     required: false
     default: 'json'
+  file-path-exclusions:
+    description: 'Comma separated list of file path patterns to exclude.'
+    required: false
+    default: ','
   arguments:
     description: 'Other arguments to Application AppInspector'
     required: false
-    default: ""
+    default: ''
 
 outputs:
 branding:
@@ -29,4 +33,5 @@ runs:
     - ${{ inputs.location-to-scan }}
     - ${{ inputs.output-path }}
     - ${{ inputs.output-format }}
+    - ${{ inputs.file-path-exclusions }}
     - ${{ inputs.arguments }}

@@ -17,6 +17,14 @@ Add ApplicationInspector to your GitHub Actions pipeline like below to scan the 
     - uses: microsoft/ApplicationInspector-Action@1
 ```
 
+A common use case is to run Application Inspector in tags only mode
+
+```
+- uses: microsoft/ApplicationInspector-Action@v1
+      with:
+        arguments: -t
+```
+
 You can also specify a number of options to the action.  See the main Application Inspector documentation for the arguments you can pass.
 
 ```
@@ -25,6 +33,7 @@ You can also specify a number of options to the action.  See the main Applicatio
         location-to-scan: relative/path/in/repo
         output-path: relative/path/in/repo
         output-format: [html | json | text]
+        file-path-exclusions: comma,separated,list
         arguments: -any -arguments -to -appinspector
 ```
 
