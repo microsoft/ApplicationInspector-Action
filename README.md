@@ -22,10 +22,10 @@ You can also specify a number of options to the action.  See the main Applicatio
 ```
     - uses: microsoft/ApplicationInspector-Action@v1
       with:
-      location-to-scan: relative/path/in/repo
-      output-path: relative/path/in/repo
-      output-format: [html | json | text]
-      arguments: -any -arguments -to -appinspector
+        location-to-scan: relative/path/in/repo
+        output-path: relative/path/in/repo
+        output-format: [html | json | text]
+        arguments: -any -arguments -to -appinspector
 ```
 
 ## Main Project
