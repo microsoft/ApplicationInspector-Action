@@ -18,9 +18,7 @@ else
     OutputPath=$GITHUB_WORKSPACE/$2
 fi
 
-if [ "$4" = "," ]; then
-    IgnoreArg = ""
-else
+if [ "$4" != "," ]; then
     IgnoreArg = "-k $GITHUB_WORKSPACE/$4"
 fi
 
