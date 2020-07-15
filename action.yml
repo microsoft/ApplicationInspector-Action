@@ -1,23 +1,22 @@
-name: 'AppInspector'
-description: 'Run ApplicationInspector Static Analysis'
+name: 'TestSkim'
+description: 'Run DevSkim Code Analysis'
 inputs:
-  location-to-scan:
-    description: 'The path relative to repository root to scan.'
+  directory-to-scan:
+    description: 'The sub directory of the repository root to scan. Repository root used by default.'
     required: false
     default: 'GITHUB_WORKSPACE'
-  output-path:
-    description: 'The path relative to file root to output to.'
+  should-scan-archives:
+    description: 'Optionally scan the contents of archives.'
     required: false
-    default: "AppInspectorResults"
-  output-format:
-    description: Output format [html|json|text]
+    default: false
+  output-filename:
+    description: 'The filename for the output.'
     required: false
-    default: "json"
-  arguments:
-    description: 'Other arguments to Application AppInspector'
+    default: "devskim-results.sarif"
+  output-directory:
+    description: 'The sub directory for the output under GITHUB_WORKSPACE.'
     required: false
-    default: ""
-
+    default: "GITHUB_WORKSPACE"
 outputs:
 branding:
   icon: 'check-square'  
@@ -26,7 +25,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args: 
-    - ${{ inputs.location-to-scan }}
-    - ${{ inputs.output-path }}
-    - ${{ inputs.output-format }}
-    - ${{ inputs.arguments }}
+    - ${{ inputs.directory-to-scan }}
+    - ${{ inputs.should-scan-archives }}
+    - ${{ inputs.output-filename }}
+    - ${{ inputs.output-directory }}
