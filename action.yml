@@ -1,4 +1,4 @@
-name: 'ApplicationInspector'
+name: 'AppInspector'
 description: 'Run ApplicationInspector Static Analysis'
 inputs:
   location-to-scan:
