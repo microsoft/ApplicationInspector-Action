@@ -32,7 +32,7 @@ You can also specify a number of options to the action.  See the main Applicatio
       with:
         location-to-scan: relative/path/in/repo
         output-path: relative/path/in/repo
-        output-format: [html | json | text]
+        output-format: [json | text]
         file-path-exclusions: comma,separated,list
         arguments: -any -arguments -to -appinspector
 ```
