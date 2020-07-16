@@ -27,7 +27,7 @@ A common use case is to run Application Inspector in tags only mode
         arguments: -t
 ```
 
-You can also specify a number of options to the action.  See the Application Inspector [wiki](https://github.com/microsoft/ApplicationInspector/wiki/1.-CLI-Usage) for guidance.  This tool performs the `analyze` command.
+You can also specify a number of options to the action.  See the Application Inspector [wiki](https://github.com/microsoft/ApplicationInspector/wiki/1.-CLI-Usage#analyze-command) for guidance.  Use the documentation for the `analyze` command.
 
 ```
 - uses: microsoft/ApplicationInspector-Action@v1
