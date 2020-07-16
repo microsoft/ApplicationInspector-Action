@@ -24,7 +24,11 @@ else
 fi
 
 if [ "$4" != "," ]; then
-    IgnoreArg = "-k $GITHUB_WORKSPACE/$4"
+    IFS=',' read -ra SPLITS <<< "$4"
+    for i in "${SPLITS[@]}"; do
+        IgnoreArg = "${IgnoreArg},$GITHUB_WORKSPACE/$i"
+    done
+    IgnoreArg = "-k ${IgnoreArg:1}"
 fi
 
 /tools/appinspector analyze -s "$ScanTarget" -o "$OutputPath" -f $3 $IgnoreArg $5
