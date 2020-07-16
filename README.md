@@ -8,6 +8,8 @@ The tool supports scanning various programming languages including C, C++, C#, J
 
 Be sure to see our project wiki page for more help https://Github.com/Microsoft/ApplicationInspector/wiki for **illustrations** and additional information and help.
 
+This Action calls the Analyze functionality of Application Inspector.
+
 ## Usage
 
 Add ApplicationInspector to your GitHub Actions pipeline like below to scan the repository root and output to `AppInspectorResults.json` in the repository root.
@@ -25,7 +27,7 @@ A common use case is to run Application Inspector in tags only mode
         arguments: -t
 ```
 
-You can also specify a number of options to the action.  See the main Application Inspector documentation for the arguments you can pass.
+You can also specify a number of options to the action.  See the Application Inspector [wiki](https://github.com/microsoft/ApplicationInspector/wiki/1.-CLI-Usage) for guidance.  This tool performs the `analyze` command.
 
 ```
     - uses: microsoft/ApplicationInspector-Action@v1
@@ -33,8 +35,8 @@ You can also specify a number of options to the action.  See the main Applicatio
         location-to-scan: relative/path/in/repo
         output-path: relative/path/in/repo
         output-format: [json | text]
-        file-path-exclusions: comma,separated,list
-        arguments: -any -arguments -to -appinspector
+        file-path-exclusions: comma,separated,relative,paths
+        arguments: -any -arguments -to -analyze
 ```
 
 ## Main Project
