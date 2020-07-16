@@ -30,13 +30,13 @@ A common use case is to run Application Inspector in tags only mode
 You can also specify a number of options to the action.  See the Application Inspector [wiki](https://github.com/microsoft/ApplicationInspector/wiki/1.-CLI-Usage) for guidance.  This tool performs the `analyze` command.
 
 ```
-    - uses: microsoft/ApplicationInspector-Action@v1
-      with:
-        location-to-scan: relative/path/in/repo
-        output-path: relative/path/in/repo
-        output-format: [json | text]
-        file-path-exclusions: comma,separated,relative,paths
-        arguments: -any -arguments -to -analyze
+- uses: microsoft/ApplicationInspector-Action@v1
+  with:
+    location-to-scan: relative/path/in/repo
+    output-path: relative/path/in/repo
+    output-format: [json | text]
+    file-path-exclusions: comma,separated,relative,paths
+    arguments: -any -arguments -to -analyze
 ```
 
 ## Main Project
