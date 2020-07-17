@@ -15,12 +15,12 @@ This Action calls the Analyze functionality of Application Inspector.
 Add ApplicationInspector to your GitHub Actions pipeline like below to scan the repository root and output to `AppInspectorResults.json` in the repository root.
 
 ```
-    - uses: actions/checkout@v2
-    - uses: microsoft/ApplicationInspector-Action@1
-    - uses: actions/upload-artifact@v2
-        with:
-            name: AppInspectorResults
-            path: AppInspectorResults.json
+- uses: actions/checkout@v2
+- uses: microsoft/ApplicationInspector-Action@1
+- uses: actions/upload-artifact@v2
+    with:
+        name: AppInspectorResults
+        path: AppInspectorResults.json
 ```
 
 A common use case is to run Application Inspector in tags only mode
