@@ -9,7 +9,7 @@
 if [ ${3,,} = "html" ]
     echo "html output is not supported in the GitHub Action."
     exit -1
-esac
+fi
 
 if [ "$1" = "GITHUB_WORKSPACE" ]; then
     ScanTarget=$GITHUB_WORKSPACE
