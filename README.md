@@ -16,7 +16,7 @@ Add ApplicationInspector to your GitHub Actions pipeline like below to scan the 
 
 ```
 - uses: actions/checkout@v2
-- uses: microsoft/ApplicationInspector-Action@1
+- uses: microsoft/ApplicationInspector-Action@v1
 - uses: actions/upload-artifact@v2
     with:
         name: AppInspectorResults
