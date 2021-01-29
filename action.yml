@@ -22,7 +22,6 @@ inputs:
     required: false
     default: ''
 
-outputs:
 branding:
   icon: 'check-square'  
   color: 'green'  
