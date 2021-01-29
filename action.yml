@@ -1,5 +1,5 @@
 name: 'AppInspector'
-description: 'Run ApplicationInspector Static Analysis'
+description: 'Run Application Inspector Static Analysis to identify coding features of first or third party software components.'
 inputs:
   location-to-scan:
     description: 'The path relative to repository root to scan.'
