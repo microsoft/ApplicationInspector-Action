@@ -3,7 +3,7 @@
 # $1 is the path relative to repo root to scan
 # $2 is the output path relative to repo root.
 # $3 is the output format
-# $4 is the comma separated list to pass to ignore
+# $4 is the comma separated list to glob patterns to ignore
 # $5 is the arguments
 
 if [ ${3,,} = "html" ]; then
@@ -28,7 +28,7 @@ if [ "$4" != "," ]; then
     for i in "${SPLITS[@]}"; do
         IgnoreArg = "${IgnoreArg},$GITHUB_WORKSPACE/$i"
     done
-    IgnoreArg = "-k ${IgnoreArg:1}"
+    IgnoreArg = "-g ${IgnoreArg:1}"
 fi
 
-/tools/appinspector analyze -s "$ScanTarget" -o "$OutputPath" -f $3 $IgnoreArg $5
+/tools/appinspector analyze --no-show-progress -s "$ScanTarget" -o "$OutputPath" -f $3 $IgnoreArg $5
