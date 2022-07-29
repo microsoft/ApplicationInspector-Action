@@ -39,7 +39,7 @@ You can also specify a number of options to the action.  See the Application Ins
     location-to-scan: relative/path/in/repo
     output-path: relative/path/in/repo
     output-format: [json | text]
-    file-path-exclusions: comma,separated,relative,paths
+    file-path-exclusions: comma,separated,glob,patterns
     arguments: -any -arguments -to -analyze
 ```
 
