@@ -41,6 +41,7 @@ You can also specify a number of options to the action.  See the Application Ins
     output-format: [json | text]
     file-path-exclusions: comma,separated,glob,patterns
     arguments: -any -arguments -to -analyze
+    pre-release: [ true | false ]
 ```
 
 ## Main Project
