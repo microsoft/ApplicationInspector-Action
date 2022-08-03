@@ -21,6 +21,10 @@ inputs:
     description: 'Other arguments to Application AppInspector'
     required: false
     default: ''
+  pre-release:
+    description: 'If there is pre-release version that is a later version number use that. Otherwise will use latest stable.'
+    required: false
+    default: false
 
 branding:
   icon: 'check-square'  
@@ -34,3 +38,4 @@ runs:
     - ${{ inputs.output-format }}
     - ${{ inputs.file-path-exclusions }}
     - ${{ inputs.arguments }}
+    - ${{ inputs.pre-release }}
