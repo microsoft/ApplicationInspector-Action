@@ -5,6 +5,7 @@
 # $3 is the output format
 # $4 is the comma separated list to glob patterns to ignore
 # $5 is the arguments
+# $6 is if beta should be used
 
 if [ ${3,,} = "html" ]; then
     echo "html output is not supported in the GitHub Action."
@@ -31,4 +32,8 @@ if [ "$4" != "," ]; then
     IgnoreArg = "-g ${IgnoreArg:1}"
 fi
 
-/tools/appinspector analyze --no-show-progress -s "$ScanTarget" -o "$OutputPath" -f $3 $IgnoreArg $5
+if [ "$6" = "true" ]
+    /beta-tools/appinspector analyze --no-show-progress -s "$ScanTarget" -o "$OutputPath" -f $3 $IgnoreArg $5
+else
+    /tools/appinspector analyze --no-show-progress -s "$ScanTarget" -o "$OutputPath" -f $3 $IgnoreArg $5
+fi
