@@ -32,7 +32,7 @@ if [ "$4" != "," ]; then
     IgnoreArg = "-g ${IgnoreArg:1}"
 fi
 
-if [ "$6" = "true" ]
+if [ "$6" = "true" ]; then
     /beta-tools/appinspector analyze --no-show-progress -s "$ScanTarget" -o "$OutputPath" -f $3 $IgnoreArg $5
 else
     /tools/appinspector analyze --no-show-progress -s "$ScanTarget" -o "$OutputPath" -f $3 $IgnoreArg $5
