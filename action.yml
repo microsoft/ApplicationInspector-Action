@@ -10,7 +10,7 @@ inputs:
     required: false
     default: 'AppInspectorResults'
   output-format:
-    description: 'Output format [html|json|text]'
+    description: 'Output format [html|json|text|sarif]'
     required: false
     default: 'json'
   file-path-exclusions:
